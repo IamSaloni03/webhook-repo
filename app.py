@@ -66,13 +66,37 @@ def get_events():
 def index():
     return """
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
+    <meta charset="UTF-8">
     <title>GitHub Events Monitor</title>
-    <meta charset="utf-8">
     <style>
-        body { font-family: Arial,sans-serif; max-width
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 800px;
+            margin: 40px auto;
+            background-color: #f9f9f9;
+        }
+        h1 {
+            text-align: center;
+        }
+        #events {
+            background: #ffffff;
+            padding: 20px;
+            border-radius: 6px;
+        }
+    </style>
+</head>
+<body>
+    <h1>GitHub Events Monitor</h1>
+    <div id="events">
+        <p>Waiting for events...</p>
+    </div>
+</body>
+</html>
 """
+
+
 
 if __name__ == "__main__":
     port = int(os.getenv("PORT", 10000))
