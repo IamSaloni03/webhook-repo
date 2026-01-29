@@ -65,9 +65,14 @@ def get_events():
 @app.route("/")
 def index():
     return """
-    <h2>Webhook Receiver Active</h2>
-    <p>Check <a href="/events">/events</a> for stored events.</p>
-    """
+<!DOCTYPE html>
+<html>
+<head>
+    <title>GitHub Events Monitor</title>
+    <meta charset="utf-8">
+    <style>
+        body { font-family: Arial,sans-serif; max-width
+"""
 
 if __name__ == "__main__":
     port = int(os.getenv("PORT", 10000))
